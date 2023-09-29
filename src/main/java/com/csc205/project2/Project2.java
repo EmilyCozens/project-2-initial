@@ -1,5 +1,6 @@
 package com.csc205.project2;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,29 +13,36 @@ import java.util.List;
 public class Project2 {
 
     public static void main(String[] args) {
-
         /*
         The following code works with the example design given.
          */
+        // Create instances of different shapes
+        ThreeDimensionalShape Sphere = new Sphere(2.0);
+        ThreeDimensionalShape Cube = new Cube(5.0);
+        ThreeDimensionalShape Cylinder = new Cylinder(4.0, 1.0);
+        ThreeDimensionalShape Cone = new Cone(3.0, 2.0);
 
-        /*ThreeDimensionalShape sphere = new Sphere(2.0);
-        ThreeDimensionalShape cube = new Cube(5.0);
-        ThreeDimensionalShape cylinder = new Cylinder(4.0, 1.0);
-
-        // We'll cover this stuff in module 4
+        // Add the shapes to a list for easy processing
         List<ThreeDimensionalShape> shapes = new ArrayList<>();
-        shapes.add(sphere);
-        shapes.add(cube);
-        shapes.add(cylinder);
+        shapes.add(Sphere);
+        shapes.add(Cube);
+        shapes.add(Cylinder);
+        shapes.add(Cone);
 
-        shapes.forEach(System.out::println);*/
+        shapes.forEach(System.out::println);
 
         /*
         The following code works with the code given.
          */
 
+        /*
         Sphere sphere = new Sphere(2.0);
         System.out.println(sphere);
+        */
+
+        for (ThreeDimensionalShape shape : shapes) {
+            System.out.println(shape);
+        }
     }
 
 }
